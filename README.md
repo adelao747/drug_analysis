@@ -411,7 +411,7 @@ Calculate the final tumor volume of each mouse across four of the most promising
 
 Using `Matplotlib`, generate a box plot that shows the distribution of the tumor volume for all the mice in each treatment group. Highlight any potential outliers in the plot by changing their color and style.
 
-Note: All four box plots should be within the same figure. Use this `[Matplotlib documentation page](https://matplotlib.org/stable/gallery/statistics/boxplot_demo.html)` for help with changing the style of the outliers.
+Note: All four box plots should be within the same figure. Use this [Matplotlib documentation page](https://matplotlib.org/stable/gallery/statistics/boxplot_demo.html) for help with changing the style of the outliers.
 
 
 
