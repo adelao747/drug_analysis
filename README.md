@@ -1,34 +1,36 @@
-# Analysis Introduction: Anti-Cancer Medication Treatments
+# Analysis Introduction: Anti-Cancer Medication Analysis
 
-You've just joined Pymacueticals, Inc., a new pharmaceutical company that specializes in anti-cancer medications. Recently, it began screening for potential treatments for squamous cell carcinoma (SCC), a commonly occurring form of skin cancer.
+You're just joined Pymaceuticals, Inc., a new pharmaceutical company that specializes in anti-cancer medications. Recently, it began screening for potential treatments for squamous cell carcinoma (SCC), a commonly occurring form of skin cancer.
 
-As as senior data analyst at the company, you've been given access to the complete data from their most recent animal study. In this study, 249 mice who were identified with SCC tumors received treatment with a range of drug regimens. Over the course of 45 days, tumor development was observed and measured. The purpose of this study was to compare the performance of Pymaceutical's drug of interest, Capomuln, against the other treatment regimens.
+As a senior data analyst at the company, you've been given access to the complete data from their most recent study. In this study, 249 mice who were identified with SCC tumors received treatment with a range of drug regimens. Over the course of 45 days, tumor volume development was observed and measured. The purpose of this study was to compare the performance of Pymaceutical's drug of interest, Capomulin, against the other treatment regimens.
 
-The executive team has asked you with generating all of the tables and figures needed for the technical report of the clinical study. They have also asked you for a top-level summary of the study results.
+The executive team has tasked you with generating all of the tables and figures needed for the technical report of the clinical study. They have also asked you for a top-level summary of the study results.
 
-# Instructions and Data Preparation
+# Instructions
 
-## This assignment is broken down into the following tasks:
+This assignment is broken down into the following tasks:
 
 - Prepare the data
+
 - Generate summary statistics
+
 - Create bar charts and pie charts
+
 - Calculate quartiles, find outliers, and create a box plot
+
 - Create a line plot and a scatter plot
+
+- Calculate correlation and regression
+
 - Submit your final analysis
 
-## Prepare the data
+# Prepare the Data
 
-1. Run the provided package dependency and data imports, and then merge the `mouse_metadata` and `study_results` dataframes into a single dataframe.
-   
+1. Run the provided package dependency and data imports, and then merge the `mouse_metadata` and `study_results` dataframes into a single dataframe
+
 2. Display the number of unique mice IDs in the data, and then check for any mouse ID with duplicate time points. Display the data associated with that mouse ID, and then create a new dataframe where this data is removed. Use this cleaned dataframe for the remaining steps.
-   
+
 3. Display the updated number of unique mice IDs.
-
-
-
-
-
 
 
 
@@ -118,16 +120,15 @@ The executive team has asked you with generating all of the tables and figures n
 
     
 
-# Generating the Summary Statistics Table
+# Generate Summary Statistics
 
-Create a dataframe of summary statistics. Remember, there is more than one method to produce the results you're after, so the method you use is less important than the results.
+Create a dataframe of summary statistics. Remember, there is more than one method to produce the results you're after, so the method you use is less important than the result.
 
 Your summary statistics should include:
 
 - A row for each drug regimen. These regimen names should be contained in the index column.
 
 - A column for each of the following statistics: mean, median, variance, standard deviation, and SEM of the tumor volume.
-
 
 
 
@@ -139,7 +140,7 @@ Your summary statistics should include:
       <th>Median Tumor Volume</th>
       <th>Tumor Volume Variance</th>
       <th>Tumor Volume Std. Dev.</th>
-      <th>Tumor Volume Std. Err.</th>
+      <th>Tumor Volume SEM</th>
     </tr>
     <tr>
       <th>Drug Regimen</th>
@@ -234,7 +235,6 @@ Your summary statistics should include:
   </tbody>
 </table>
 </div>
-
 
 
 
@@ -354,106 +354,94 @@ Your summary statistics should include:
 
 Generate two bar charts. Both charts should be identical and show the total number of rows (Mouse ID/Timepoints) for each drug regimen throughout the study.
 
-- Create the first bat chart with the `Pandas dataframe.plot()` method.
-
-- Create the second bar chart with `Matplotlibs pyplot` methods.
+   - Create the first bar chart with the Pandas `dataframe.plot()` method.
+  
+   - Create the second bar chart with Matplotlib's `pyplot` methods.
 
 
 
 
 
     
-![bar_chart](https://github.com/adelao747/drug_analysis/assets/113153195/ea5a8518-ed10-4b32-9844-398a8d779346)
-
-    
+![bar_chart](https://github.com/adelao747/drug_analysis/assets/113153195/0322dc65-1927-4663-b2c9-a483a63ce63b)
 
 
-# Creating the Pie Charts
+# Creating the Pie Chart
 
 Generate two pie charts. Both charts should be identical and show the distribution of female versus male mice in the study.
 
--  Create the first pie chart with the `Pandas dataframe.plot()` method.
+    - Create the first pie chart with the Pandas `dataframe.plot()` method.
 
--  Create the second pie chart with `Matplotlib's pyplot` methods.
-
-
-
-
-
-    
-![pie_chart](https://github.com/adelao747/drug_analysis/assets/113153195/2ae8d626-3490-4742-808a-d6639e9b446b)
-
-    
-
-
-
-
-
-
-
-# Calculating Quartiles and Finding Outliers
-
-Calculate the final tumor volume of each mouse across four of the most promising treatment regimens: Capomulin, Ramicane, Infubinol, and Ceftamin. Then, calculate quartiles and IQR, and determine if there are any potential outliers across all four treatment regimens. Use the following substeps:
-
-- Create a grouped dataframe that shows the last (greatest) time point for each mouse. Merge this grouped dataframe with the original cleaned dataframe.
-
-- Create a list that holds the treatment names as well as a second, empty list to hold the tumor volume data.
-
-- Loope through each drug in the treatment list, locating the rows in the merged dataframe that corresponds to each treatment. Append the resulting final tumor volumes for each drug to the empty list.
-
-- Determine outliers using the upper and lower bounds, and then print the results.
-
-
-
-    
-
-# Creating the Boxplot
-
-Using `Matplotlib`, generate a box plot that shows the distribution of the tumor volume for all the mice in each treatment group. Highlight any potential outliers in the plot by changing their color and style.
-
-Note: All four box plots should be within the same figure. Use this [Matplotlib documentation page](https://matplotlib.org/stable/gallery/statistics/boxplot_demo.html) for help with changing the style of the outliers.
+    - Create the second pie chart with Matplotlib's `pyplot` methods.
 
 
 
 
 
     
-![box_plot](https://github.com/adelao747/drug_analysis/assets/113153195/b32cf365-3662-46e9-92e2-ddd42ae27418)
+![pie_chart](https://github.com/adelao747/drug_analysis/assets/113153195/746d3868-7e7c-4f92-822d-5f0a19c7404b)
+
+
+
+
+
+# Calculate Quartiles and Finding Outliers
+
+Calculate the final tumor volume of each mouse across four of the most promising treatment regimens: Capomulin, Ramicane, Infubinol, and Ceftamin. Then, calculate the quartiles and IQR, and determine if there are any potential outliers across all four treatment regimens.
+
+Use the following subsets:
+    - Create a grouped dataframe that shows the last (greatest) time point for each mouse. Merge this grouped dataframe with the original cleaned dataframe.
+
+    - Create a list that holds the treatment names as well as a second, empty list to hold the tumor volume data.
+
+    - Loop through each drug in the treatment list, locating the rows in the merged dataframe that correspond to each treatment. Append the resulting tumor volumes for each drug to the empty list.
+
+    - Determine outliers by using the upper and lower bounds, and then print the results.
+
+    Values below 25.35% could be outliers.
+    Values above 87.67% could be outliers.
+    
+
+# Creating the Box Plot
+
+Using Matplotlib, generate a box plot that shows the distribution of the final tumor volume for all the mice in each treatment group. Highlight any potential outliers in the plot by changing their color and style.
+
+Hint: All four box plots should be within the same figure. Use this [Matplotlib documentation page](https://matplotlib.org/stable/gallery/statistics/boxplot_demo.html) for help with changing the style of the outliers.
+
+
+![box_plot](https://github.com/adelao747/drug_analysis/assets/113153195/aa9ec6cb-a185-44f8-89d1-a8994730374f)
+
 
     
 
 
-# Creating the Line Plot
+# Creating a Line Plot
 
-Select a single mouse that was treated with Capomulin, and generate a line plot of the tumor volume versus time point for that mouse.
-
-
-
-
-
-    
-![line_plot](https://github.com/adelao747/drug_analysis/assets/113153195/49e620b5-18be-4529-b824-e986d67f4e79)
-
-    
-
-
-# Creating the Scatter Plot
-
-Generate a scatter plot of mouse weight versus average observed tumor volume for the entire `Capomulin` treatment regimen.
+Select a single mouse that was treated with Capomulin, and generate a line plot of tumor volume versus time point for that mouse.
 
 
 
 
 
     
-![scatter_plot](https://github.com/adelao747/drug_analysis/assets/113153195/fa0f18f6-a955-4c69-ac24-835264959d6a)
+![line_plot](https://github.com/adelao747/drug_analysis/assets/113153195/897c2a4c-ea0f-48e2-81b0-de350c0b4b3f)
+
+
+# Creating a Scatter Plot
+
+Generate a scatter plot of mouse weight versus average observed tumor volume for the entire Capomulin treatment regimen.
+
+
+
+
 
     
+![scatter_plot](https://github.com/adelao747/drug_analysis/assets/113153195/011eefeb-da46-443e-b953-76556800a0c0)
 
 
-# Calculating Correlation and Regression
+# Calculate Correlation and Regression
 
-1. Calculate the correlation coefficient and linear regression model between mouse weight and average observed tumor volume for the entire `Capomulin` treatment regimen.
+1. Calculate the correlation coefficient and linear regression model between mouse weight and average observed tumor volume for the entire Capomulin treatment regimen.
 
 2. Plot the linear regression model on top of the previous scatter plot.
 
@@ -462,34 +450,35 @@ Generate a scatter plot of mouse weight versus average observed tumor volume for
 
 
     
-![linear_regression](https://github.com/adelao747/drug_analysis/assets/113153195/55ade526-78c8-426b-9e39-009466f0dca9)
+![linear_regression](https://github.com/adelao747/drug_analysis/assets/113153195/54662015-74ec-47f3-88d0-d373c2c8322f)
 
+
+    The correlation between the mouse weight and the average tumor volume is 0.84
     
-
 
 # Hints and Considerations
 
 - Use the code comments in the provided starter file to guide you through this assignment.
 
-- Use proper labeling for your plots. Include plot titles, axis labels, legend labels, x-axis and y-axis limits, etc.
+- Use proper labeling for your plots. Include plot titles, axis, labels, legend labels, x-axis and y-axis limits, etc.
 
-- As you work on this assignment, refer to `Stack Overflow` and the `Matplotlib` documentation for guidance. These are essential tools in every data analysis's tool belt.
+- As you work on this assignment, refer to Stack Overflow and the Matplotlib documentation for guidance. These are essential tools in every data analyst's tool belt.
 
 - Remember that there are many ways to approach a data problem: One way is to break up your task into micro tasks. For example, ask yourself questions like the following:
 
-  - How does my dataframe need to be structured so it has the correct x-axis and y-axis?
+    - How does my dataframe need to be structured so it has the correct x-axis and y-axis?
  
-  - How do I build a basic scatter plot?
+    - How do I build a basic scatter plot?
  
-  - How do I add a label to a scatter plot?
+    - How do I add label to a scatter plot?
  
-  - Where in the dataframe can I find the names that will go into the labels?
+    - Where in the dataframe can I find the names that will go into the labels?
  
-  - Get help when you need it! Instructional team is there for you.
- 
-## References
+    - Get help when you need it! Your instructional team is there for you.
 
-Data generated by `Mockaroo, LLC (2022)`. Realistic Data Generator
+# References
+
+Data generated by [Mockaroo](https://mockaroo.com/), LLC (2022). Realistic Data Generator.
 
 
 
