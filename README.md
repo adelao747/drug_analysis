@@ -392,6 +392,7 @@ Generate two pie charts. Both charts should be identical and show the distributi
 Calculate the final tumor volume of each mouse across four of the most promising treatment regimens: Capomulin, Ramicane, Infubinol, and Ceftamin. Then, calculate the quartiles and IQR, and determine if there are any potential outliers across all four treatment regimens.
 
 Use the following subsets:
+
     - Create a grouped dataframe that shows the last (greatest) time point for each mouse. Merge this grouped dataframe with the original cleaned dataframe.
 
     - Create a list that holds the treatment names as well as a second, empty list to hold the tumor volume data.
