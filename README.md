@@ -1,130 +1,46 @@
-# Analysis Introduction: Anti-Cancer Medication
+# Analysis Introduction: Pymaceuticals Anti-Cancer Medications
 
-You're just joined Pymaceuticals, Inc., a new pharmaceutical company that specializes in anti-cancer medications. Recently, it began screening for potential treatments for squamous cell carcinoma (SCC), a commonly occurring form of skin cancer.
+You have just joined Pymaceutical's, Inc., a new pharmaceutical company that specializes in anti-cancer medications. Recently, it began screening for potential treatments for squamous cell carcinoma (SCC), a commonly occurring form of skin cancer.
 
-As a senior data analyst at the company, you've been given access to the complete data from their most recent study. In this study, 249 mice who were identified with SCC tumors received treatment with a range of drug regimens. Over the course of 45 days, tumor volume development was observed and measured. The purpose of this study was to compare the performance of Pymaceutical's drug of interest, Capomulin, against the other treatment regimens.
+As a senior data analyst at the company, you have been given access to the complete data from their most recent animal study. In this study, 249 mice who were identified with SCC tumors received treatment with a range of drug regimens. Over the course of 45 days, tumor development was observed and measured. The purpose of this study was to compare the performance of Pymaceuticals' drug of interest, Capomulin, against the other treatment regimens.
 
 The executive team has tasked you with generating all of the tables and figures needed for the technical report of the clinical study. They have also asked you for a top-level summary of the study results.
 
-Included in this analysis, is our [Pymaceutical's presentation](https://revealjs.com/demo/?view=scroll). In this presentation, you will see a interactive summary of this report.
+Included in this written report, is our [Pymaceutical's presentation](https://revealjs.com/demo/?view=scroll). Please click the link to view.
 
 # Instructions
 
 This assignment is broken down into the following tasks:
 
-- Prepare the data
+- Prepare the data.
 
-- Generate summary statistics
+- Generate summary statistics.
 
-- Create bar charts and pie charts
+- Create bar chart and pie charts.
 
-- Calculate quartiles, find outliers, and create a box plot
+- Calculate quartiles, find outliers, and create a box plot.
 
-- Create a line plot and a scatter plot
+- Create a line plot and a scatter plot.
 
-- Calculate correlation and regression
+- Calculcate correlation and regression.
 
-- Submit your final analysis
+- Submit your final analysis.
 
 # Prepare the Data
 
-1. Run the provided package dependency and data imports, and then merge the `mouse_metadata` and `study_results` dataframes into a single dataframe
+1. Run the provided package dependency and data imports, and then merge the `mouse_metadata` and `study_results` dataframes into a single dataframe.
 
-2. Display the number of unique mice IDs in the data, and then check for any mouse ID with duplicate time points. Display the data associated with that mouse ID, and then create a new dataframe where this data is removed. Use this cleaned dataframe for the remaining steps.
+2. Display the number of unique mice IDs in the data, and then check for any mouse ID with duplicate time points. Displays the data associated with that mouse ID, and then create a dataframe where this data is removed. Use this cleaned dataframe for the remaining steps.
 
 3. Display the updated number of unique mice IDs.
 
 
 
-<table border="1" class="dataframe">
-  <thead>
-    <tr style="text-align: right;">
-      <th></th>
-      <th>Age_months</th>
-      <th>Weight (g)</th>
-      <th>Timepoint</th>
-      <th>Tumor Volume (mm3)</th>
-      <th>Metastatic Sites</th>
-    </tr>
-  </thead>
-  <tbody>
-    <tr>
-      <th>count</th>
-      <td>1880.00</td>
-      <td>1880.00</td>
-      <td>1880.00</td>
-      <td>1880.00</td>
-      <td>1880.00</td>
-    </tr>
-    <tr>
-      <th>mean</th>
-      <td>12.76</td>
-      <td>25.66</td>
-      <td>19.61</td>
-      <td>50.44</td>
-      <td>1.02</td>
-    </tr>
-    <tr>
-      <th>std</th>
-      <td>7.18</td>
-      <td>3.94</td>
-      <td>14.09</td>
-      <td>8.91</td>
-      <td>1.14</td>
-    </tr>
-    <tr>
-      <th>min</th>
-      <td>1.00</td>
-      <td>15.00</td>
-      <td>0.00</td>
-      <td>22.05</td>
-      <td>0.00</td>
-    </tr>
-    <tr>
-      <th>25%</th>
-      <td>7.00</td>
-      <td>25.00</td>
-      <td>5.00</td>
-      <td>45.00</td>
-      <td>0.00</td>
-    </tr>
-    <tr>
-      <th>50%</th>
-      <td>13.00</td>
-      <td>27.00</td>
-      <td>20.00</td>
-      <td>48.93</td>
-      <td>1.00</td>
-    </tr>
-    <tr>
-      <th>75%</th>
-      <td>19.25</td>
-      <td>29.00</td>
-      <td>30.00</td>
-      <td>56.32</td>
-      <td>2.00</td>
-    </tr>
-    <tr>
-      <th>max</th>
-      <td>24.00</td>
-      <td>30.00</td>
-      <td>45.00</td>
-      <td>78.57</td>
-      <td>4.00</td>
-    </tr>
-  </tbody>
-</table>
-</div>
 
-
-
-
-
-    
 
 # Generate Summary Statistics
 
-Create a dataframe of summary statistics. Remember, there is more than one method to produce the results you're after, so the method you use is less important than the result.
+Create a dataframe of summary statistics. Remember, there is more than one method to produce the results you are after, so the method you use is less important than the result.
 
 Your summary statistics should include:
 
@@ -356,69 +272,72 @@ Your summary statistics should include:
 
 Generate two bar charts. Both charts should be identical and show the total number of rows (Mouse ID/Timepoints) for each drug regimen throughout the study.
 
-   - Create the first bar chart with the Pandas `dataframe.plot()` method.
-  
-   - Create the second bar chart with Matplotlib's `pyplot` methods.
+- Create the first bar chart with the Pandas `dataplot.plot()` method.
+
+- Create the second bar chart with Matplotlib's `pyplot` methods.
 
 
 
 
 
     
-![bar_chart](https://github.com/adelao747/drug_analysis/assets/113153195/0322dc65-1927-4663-b2c9-a483a63ce63b)
+![img.png](img.png)
+    
 
 
-# Creating the Pie Chart
+# Creating the Pie Charts
 
 Generate two pie charts. Both charts should be identical and show the distribution of female versus male mice in the study.
 
-    - Create the first pie chart with the Pandas `dataframe.plot()` method.
+- Create the first pie chart with the Pandas `dataframe.plot()` method.
 
-    - Create the second pie chart with Matplotlib's `pyplot` methods.
+- Create the second pie chart with Matplotlib's `pyplot` methods.
 
 
 
 
 
     
-![pie_chart](https://github.com/adelao747/drug_analysis/assets/113153195/746d3868-7e7c-4f92-822d-5f0a19c7404b)
+![img_2.png](img_2.png)    
 
 
 
 
 
-# Calculate Quartiles and Finding Outliers
+# Calculate Quartiles and Find Outliers
 
-Calculate the final tumor volume of each mouse across four of the most promising treatment regimens: Capomulin, Ramicane, Infubinol, and Ceftamin. Then, calculate the quartiles and IQR, and determine if there are any potential outliers across all four treatment regimens.
+Calculate the final tumor volume of each mouse across the four of the most promising treatment regimens: Capomulin, Ramicane, Infubinol, and Ceftamin. Then, calculate the quartiles and IQR, and determine if there are any potential outliers across all four treatment regimens. Use the following substeps:
 
-Use the following subsets:
+- Create a grouped dataframe that shows the last (greatest) time point for each mouse. Merge this grouped dataframe with the original cleaned dataframe.
 
-    - Create a grouped dataframe that shows the last (greatest) time point for each mouse. Merge this grouped dataframe with the original cleaned dataframe.
+- Create a list that holds the treatment names as well as a second, empty list to hold the tumor vollume data.
 
-    - Create a list that holds the treatment names as well as a second, empty list to hold the tumor volume data.
+- Loop through each drug in the treatments list, locating the rows in the merged dataframe that corresponds to each treatment. Append the resulting final tumor volumes for each drug to the empty list.
 
-    - Loop through each drug in the treatment list, locating the rows in the merged dataframe that correspond to each treatment. Append the resulting tumor volumes for each drug to the empty list.
+- Determine outliers by using the upper and lower bounds, and then print the results.
 
-    - Determine outliers by using the upper and lower bounds, and then print the results.
+
+
 
     Values below 25.35% could be outliers.
     Values above 87.67% could be outliers.
-    
+
 
 # Creating the Box Plot
 
-Using Matplotlib, generate a box plot that shows the distribution of the final tumor volume for all the mice in each treatment group. Highlight any potential outliers in the plot by changing their color and style.
+Using Matplotlib, generate a box plot that shows the distribution of the final tumor volume for all the mice in each treatment group. Highlight potential outliers in the plot by changing their color and style.
 
-Hint: All four box plots should be within the same figure. Use this [Matplotlib documentation page](https://matplotlib.org/stable/gallery/statistics/boxplot_demo.html) for help with changing the style of the outliers.
+`Hint:` All four box plots should be within the same figure. Use this [Matplotlib documentation page](https://matplotlib.org/stable/gallery/statistics/boxplot_demo.html) for help with changing the style of the outliers.
 
 
-![box_plot](https://github.com/adelao747/drug_analysis/assets/113153195/aa9ec6cb-a185-44f8-89d1-a8994730374f)
+
 
 
     
+![img_3.png](img_3.png)    
 
 
-# Creating a Line Plot
+# Creating the Line Plot
 
 Select a single mouse that was treated with Capomulin, and generate a line plot of tumor volume versus time point for that mouse.
 
@@ -427,19 +346,19 @@ Select a single mouse that was treated with Capomulin, and generate a line plot 
 
 
     
-![line_plot](https://github.com/adelao747/drug_analysis/assets/113153195/897c2a4c-ea0f-48e2-81b0-de350c0b4b3f)
+![img_4.png](img_4.png)    
 
 
-# Creating a Scatter Plot
+# Generating the Scatter Plot
 
-Generate a scatter plot of mouse weight versus average observed tumor volume for the entire Capomulin treatment regimen.
+Generate a scatter plot of mouse weight verses average observed tumor volume for the entire Capomulin treatment regimen.
 
 
 
 
 
     
-![scatter_plot](https://github.com/adelao747/drug_analysis/assets/113153195/011eefeb-da46-443e-b953-76556800a0c0)
+![img_5.png](img_5.png)    
 
 
 # Calculate Correlation and Regression
@@ -453,30 +372,46 @@ Generate a scatter plot of mouse weight versus average observed tumor volume for
 
 
     
-![linear_regression](https://github.com/adelao747/drug_analysis/assets/113153195/54662015-74ec-47f3-88d0-d373c2c8322f)
+![img_6.png](img_6.png)    
 
 
-    The correlation between the mouse weight and the average tumor volume is 0.84
-    
+    The correlation between mouse weight and the average tumor volume is 0.84
+
+
+#### `IMPORTANT`
+
+`It is your responsibility to include a note in the README section of your repo specifying code source and its location within your repo`. This applies if you have worked with a peer on an assignment, used code in which you did not author or create sourced from a forum such as Stack Overflow, or you received code outside curriculum content from support staff such as an Instructor, TA Tutor, or Learning Assistant. This will provide visibility to grading staff of your circumstance in order to avoid flagging your work as plagiarized.
+
+If you are stuggling with a challenge assignment or any aspect of the academic curriculum, please remember that there are student support services available for you:
+
+1. Ask the class Slack channel/peer support.
+
+2. Ask BCS Learning Assistants exists in your class Slack application.
+
+3. Office hours facilitated by your instructional staff before and after each class session.
+
+4. [Tutoring Guidelines](https://docs.google.com/document/d/1hTldEfWhX21B_Vz9ZentkPeziu4pPfnwiZbwQB27E90/edit?pli=1#heading=h.sv8pplcsduz4) schedule a tutor session in the Tutor Sessions section of Bootcampspot - Canvas.
+
+5. If the above resources are not applicable and you have a need, please reach out to a member of your instructional team, your Student Success Advisor, or submit a support ticket in the Student Support section of your BCS application.
 
 # Hints and Considerations
 
 - Use the code comments in the provided starter file to guide you through this assignment.
 
-- Use proper labeling for your plots. Include plot titles, axis, labels, legend labels, x-axis and y-axis limits, etc.
+- Use proper labeling for your plots. Include plot titles, axis labels, legend labels, x-axis and y-axis limits, etc.
 
 - As you work on this assignment, refer to Stack Overflow and the Matplotlib documentation for guidance. These are essential tools in every data analyst's tool belt.
 
 - Remember that there are many ways to approach a data problem: One way is to break up your task into micro tasks. For example, ask yourself questions like the following:
 
     - How does my dataframe need to be structured so it has the correct x-axis and y-axis?
- 
+    
     - How do I build a basic scatter plot?
- 
-    - How do I add label to a scatter plot?
- 
+    
+    - How do I add a label to a scatter plot?
+    
     - Where in the dataframe can I find the names that will go into the labels?
- 
+    
     - Get help when you need it! Your instructional team is there for you.
 
 # References
