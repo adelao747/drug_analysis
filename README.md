@@ -281,7 +281,7 @@ Generate two bar charts. Both charts should be identical and show the total numb
 
 
     
-![img.png](img.png)
+![image](https://github.com/adelao747/drug_analysis/assets/113153195/81330367-7481-481c-be83-7ab91ac63563)
     
 
 
@@ -298,7 +298,8 @@ Generate two pie charts. Both charts should be identical and show the distributi
 
 
     
-![img_2.png](img_2.png)    
+![image](https://github.com/adelao747/drug_analysis/assets/113153195/98f7d717-a57e-467f-8e48-6b3f3595c192)
+
 
 
 
@@ -334,7 +335,8 @@ Using Matplotlib, generate a box plot that shows the distribution of the final t
 
 
     
-![img_3.png](img_3.png)    
+![image](https://github.com/adelao747/drug_analysis/assets/113153195/1b7fc019-2962-4b9c-9e5f-8abeb0a49932)
+
 
 
 # Creating the Line Plot
@@ -346,7 +348,8 @@ Select a single mouse that was treated with Capomulin, and generate a line plot 
 
 
     
-![img_4.png](img_4.png)    
+![image](https://github.com/adelao747/drug_analysis/assets/113153195/9416416b-e965-4fe4-93e3-5e4f9162bea1)
+
 
 
 # Generating the Scatter Plot
@@ -358,7 +361,8 @@ Generate a scatter plot of mouse weight verses average observed tumor volume for
 
 
     
-![img_5.png](img_5.png)    
+![image](https://github.com/adelao747/drug_analysis/assets/113153195/9ddd133f-67a8-4293-9766-c9b64ef1a0c2)
+
 
 
 # Calculate Correlation and Regression
@@ -372,7 +376,8 @@ Generate a scatter plot of mouse weight verses average observed tumor volume for
 
 
     
-![img_6.png](img_6.png)    
+![image](https://github.com/adelao747/drug_analysis/assets/113153195/7c061879-9315-4765-9281-fbee851bd9da)
+
 
 
     The correlation between mouse weight and the average tumor volume is 0.84
